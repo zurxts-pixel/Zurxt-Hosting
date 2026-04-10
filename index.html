@@ -3,34 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planes de hosting | Zurxt Host</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Zurxt Host | Hosting de juegos profesional</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at 10% 20%, #0b0e17, #05070c); color: #eef2ff; line-height: 1.5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        .navbar { background: rgba(7, 10, 18, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(139, 92, 246, 0.2); position: sticky; top: 0; z-index: 100; padding: 1rem 0; }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #ffffff, #a78bfa); -webkit-background-clip: text; background-clip: text; color: transparent; text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; flex-wrap: wrap; }
-        .nav-links a { color: #cbd5e1; text-decoration: none; font-weight: 500; transition: 0.2s; }
-        .nav-links a:hover { color: #a78bfa; }
-        .btn-primary { display: inline-block; background: linear-gradient(90deg, #8b5cf6, #6d28d9); color: white; padding: 0.75rem 2rem; border-radius: 40px; font-weight: 600; text-decoration: none; transition: 0.2s; border: none; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4); }
-        .pricing-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin: 2rem 0; }
-        .pricing-card { background: rgba(17, 19, 30, 0.8); backdrop-filter: blur(4px); border-radius: 28px; padding: 1.8rem; width: 280px; border: 1px solid #2a2e3a; transition: transform 0.2s, border-color 0.2s; text-align: center; }
-        .pricing-card:hover { transform: translateY(-8px); border-color: #a78bfa; }
-        .pricing-card h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .price { font-size: 2.2rem; font-weight: 800; color: #c084fc; margin: 0.5rem 0; }
-        .features { list-style: none; padding: 0; margin: 1.5rem 0; text-align: left; }
-        .features li { margin: 0.6rem 0; padding-left: 1.6rem; position: relative; }
-        .features li::before { content: "✓"; color: #10b981; position: absolute; left: 0; font-weight: bold; }
-        .section-title { font-size: 2rem; border-left: 4px solid #8b5cf6; padding-left: 1rem; margin: 2rem 0 1rem; }
-        .promo { background: linear-gradient(135deg, #1e1b2e, #0f1117); border: 1px dashed #a78bfa; border-radius: 20px; padding: 1.5rem; text-align: center; margin: 2rem 0; }
-        .promo-code { background: #2d2a3e; display: inline-block; padding: 0.3rem 1rem; border-radius: 40px; font-family: monospace; font-weight: bold; color: #c084fc; }
-        footer { text-align: center; padding: 2rem 0; border-top: 1px solid #2a2e3a; margin-top: 3rem; color: #6c7293; }
-        @media (max-width: 768px) { .pricing-card { width: 100%; } .section-title { font-size: 1.5rem; } .nav-flex { flex-direction: column; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 10% 20%, #0b0e17, #05070c);
+            color: #eef2ff;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(7, 10, 18, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #a78bfa;
+        }
+
+        /* Botones */
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(90deg, #8b5cf6, #6d28d9);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #8b5cf6;
+            color: #cbd5e1;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(139, 92, 246, 0.1);
+            color: white;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #fff, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Secciones */
+        section {
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            border-left: 4px solid #8b5cf6;
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .feature-card {
+            background: rgba(17, 19, 30, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 24px;
+            padding: 1.8rem;
+            border: 1px solid #2a2e3a;
+            transition: 0.2s;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #a78bfa;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #9ca3af;
+        }
+
+        /* Tabla */
+        .table-wrapper {
+            overflow-x: auto;
+            background: #111318;
+            border-radius: 20px;
+            padding: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #2a2e3a;
+        }
+
+        th {
+            background: #1f212e;
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #1a1c26;
+        }
+
+        .badge {
+            background: #1e1b2e;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #c084fc;
+        }
+
+        .games-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .game-item {
+            background: #1f212e;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+
+        .promo {
+            background: linear-gradient(135deg, #1e1b2e, #0f1117);
+            border: 1px dashed #a78bfa;
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .promo-code {
+            background: #2d2a3e;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-family: monospace;
+            font-weight: bold;
+            color: #c084fc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #2a2e3a;
+            margin-top: 3rem;
+            color: #6c7293;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.5rem; }
+            .nav-flex { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
@@ -48,99 +274,77 @@
 </div>
 
 <div class="container">
-    <h1 style="font-size: 2.5rem; margin: 2rem 0 1rem;">🎮 Planes de hosting</h1>
-    <p>Todos los planes incluyen: Panel Pelican, protección DDoS, backups automáticos, actualizaciones gratuitas y soporte por Discord.</p>
-
-    <div class="pricing-grid">
-        <div class="pricing-card">
-            <h3>Básico</h3>
-            <div class="price">$7 <span style="font-size: 1rem;">/mes</span></div>
-            <ul class="features">
-                <li>2 GB RAM</li>
-                <li>1 vCore (compartido)</li>
-                <li>20 GB SSD NVMe</li>
-                <li>Hasta 10 slots</li>
-                <li>Backup cada 48h</li>
-                <li>Soporte 24h respuesta</li>
-            </ul>
-            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn-primary">Contratar →</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Estándar</h3>
-            <div class="price">$13 <span style="font-size: 1rem;">/mes</span></div>
-            <ul class="features">
-                <li>4 GB RAM</li>
-                <li>2 vCores (dedicados)</li>
-                <li>40 GB SSD NVMe</li>
-                <li>Hasta 20 slots</li>
-                <li>Backup diario (7d)</li>
-                <li>Soporte 12h respuesta</li>
-            </ul>
-            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn-primary">Contratar →</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Pro</h3>
-            <div class="price">$20 <span style="font-size: 1rem;">/mes</span></div>
-            <ul class="features">
-                <li>6 GB RAM</li>
-                <li>3 vCores (dedicados)</li>
-                <li>60 GB SSD NVMe</li>
-                <li>Hasta 40 slots</li>
-                <li>Backup diario (14d)</li>
-                <li>Base de datos incluida</li>
-                <li>Soporte 8h respuesta</li>
-            </ul>
-            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn-primary">Contratar →</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Ultimate</h3>
-            <div class="price">$28 <span style="font-size: 1rem;">/mes</span></div>
-            <ul class="features">
-                <li>8 GB RAM</li>
-                <li>4 vCores (dedicados)</li>
-                <li>80 GB SSD NVMe</li>
-                <li>Hasta 80 slots</li>
-                <li>Backup diario (30d)</li>
-                <li>Base de datos + FTP externo</li>
-                <li>Soporte prioritario 4h</li>
-            </ul>
-            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn-primary">Contratar →</a>
-        </div>
+    <div class="hero">
+        <h1>🚀 Zurxt Host</h1>
+        <p>Potencia, estabilidad y soporte humano. Hosting de juegos con el mejor rendimiento por precio.</p>
+        <a href="hosting.html" class="btn-primary">Ver planes <i class="fas fa-arrow-right"></i></a>
+        <a href="https://discord.gg/TU_INVITE_AQUI" class="btn-outline" style="margin-left: 1rem;"><i class="fab fa-discord"></i> Discord</a>
     </div>
+
+    <section>
+        <h2 class="section-title">¿Por qué elegir Zurxt Host?</h2>
+        <div class="features-grid">
+            <div class="feature-card"><i class="fas fa-tachometer-alt"></i><h3>Rendimiento real</h3><p>VPS dedicado, nada de sobreventa. Recursos garantizados.</p></div>
+            <div class="feature-card"><i class="fas fa-shield-alt"></i><h3>Seguro y estable</h3><p>Backups diarios, protección DDoS y monitoreo 24/7.</p></div>
+            <div class="feature-card"><i class="fas fa-gamepad"></i><h3>Panel Pelican</h3><p>Control total: archivos, consola, plugins, usuarios.</p></div>
+            <div class="feature-card"><i class="fas fa-headset"></i><h3>Soporte humano</h3><p>Hablas con el administrador directamente en Discord.</p></div>
+            <div class="feature-card"><i class="fas fa-tag"></i><h3>Precios justos</h3><p>Sin costes ocultos, pagas lo que ves.</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">🎮 Juegos soportados</h2>
+        <div class="games-list">
+            <span class="game-item">Minecraft Java (1.8–1.21)</span>
+            <span class="game-item">Minecraft Bedrock</span>
+            <span class="game-item">Terraria</span>
+            <span class="game-item">Project Zomboid</span>
+            <span class="game-item">Palworld</span>
+            <span class="game-item">+ bajo demanda</span>
+        </div>
+        <p>¿Falta alguno? <a href="https://discord.gg/TU_INVITE_AQUI" style="color:#a78bfa;">Abre un ticket</a> y lo añadimos.</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">📊 Comparativa rápida</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Plan</th><th>RAM</th><th>CPU</th><th>Almacenamiento</th><th>Precio/mes</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Básico</strong></td><td>2 GB</td><td>1 vCore</td><td>20 GB SSD</td><td>$7</td></tr>
+                    <tr><td><strong>Estándar</strong></td><td>4 GB</td><td>2 vCores</td><td>40 GB SSD</td><td>$13</td></tr>
+                    <tr><td><strong>Pro</strong></td><td>6 GB</td><td>3 vCores</td><td>60 GB SSD</td><td>$20</td></tr>
+                    <tr><td><strong>Ultimate</strong></td><td>8 GB</td><td>4 vCores</td><td>80 GB SSD</td><td>$28</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem;">
+            <a href="hosting.html" class="btn-primary">Ver planes detallados →</a>
+        </div>
+    </section>
 
     <div class="promo">
         <i class="fas fa-gift" style="font-size: 2rem; color:#a78bfa;"></i>
-        <h3>🎁 Código de lanzamiento</h3>
-        <p>15% de descuento el primer mes con <span class="promo-code">LANZAMIENTO15</span></p>
+        <h3>🎁 Promoción de lanzamiento</h3>
+        <p>15% de descuento en cualquier plan durante el <strong>primer mes</strong> con el código</p>
+        <span class="promo-code">LANZAMIENTO15</span>
     </div>
 
     <section>
-        <h2 class="section-title">➕ Extras disponibles</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
-            <div><i class="fas fa-microchip"></i> +1 GB RAM → +$2/mes</div>
-            <div><i class="fas fa-hdd"></i> +20 GB SSD → +$2/mes</div>
-            <div><i class="fas fa-database"></i> Backup extra → +$1/mes</div>
-            <div><i class="fas fa-globe"></i> Subdominio .zurxt.uk → +$1/mes</div>
-        </div>
+        <h2 class="section-title">¿Cómo contratar?</h2>
+        <ol style="margin-left: 1.5rem; line-height: 1.8;">
+            <li>Únete a nuestro <strong>Discord</strong>.</li>
+            <li>Abre un ticket en <code>#📩abrir-ticket</code>.</li>
+            <li>Indica el plan y extras.</li>
+            <li>Realiza el pago (PayPal, transferencia o USDT).</li>
+            <li>Recibes tu servidor en <strong>menos de 4 horas</strong>.</li>
+        </ol>
     </section>
-
-    <section>
-        <h2 class="section-title">❓ Preguntas frecuentes</h2>
-        <div style="margin: 1rem 0;">
-            <p><strong>¿Cómo recibo mi servidor después de pagar?</strong><br>En menos de 4 horas (normalmente 1h) te enviamos por Discord las credenciales de acceso al panel y al juego.</p>
-            <p><strong>¿Puedo cambiar de plan después?</strong><br>Sí, puedes subir o bajar de plan cuando quieras, se prorratea el mes.</p>
-            <p><strong>¿Qué métodos de pago aceptan?</strong><br>PayPal, transferencia bancaria (México) y USDT (TRC20/BEP20).</p>
-            <p><strong>¿Hay reembolsos?</strong><br>Garantía de 7 días si no quedas satisfecho (sin abuso).</p>
-        </div>
-    </section>
-
-    <div style="text-align: center; margin: 2rem 0;">
-        <a href="https://discord.gg/TU_INVITE_AQUI" class="btn-primary"><i class="fab fa-discord"></i> Unirse a Discord y contratar</a>
-    </div>
 </div>
 
 <footer>
     <p>© 2026 Zurxt Host · <a href="index.html" style="color:#8b5cf6;">Inicio</a> · <a href="hosting.html" style="color:#8b5cf6;">Planes</a> · <a href="https://discord.gg/TU_INVITE_AQUI" style="color:#8b5cf6;">Discord</a></p>
+    <p style="font-size: 0.8rem;">Powered by <i class="fas fa-moon"></i> Moonrise · Todos los derechos reservados</p>
 </footer>
 
 </body>
