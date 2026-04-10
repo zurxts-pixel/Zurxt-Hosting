@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de hosting - Zurxt Host</title>
+    <style>
+        /* Copia aquí TODO el CSS del index.html (desde el principio hasta el final) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0c10; color: #e4e6eb; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 20px; }
+        .navbar { background: #0f1117; padding: 1rem 0; border-bottom: 1px solid #2a2e3a; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #fff, #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { color: #cbd5e1; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #8b5cf6; }
+        .btn { display: inline-block; background: linear-gradient(90deg, #8b5cf6, #6d28d9); color: white !important; padding: 0.75rem 1.8rem; border-radius: 40px; font-weight: 600; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3); }
+        h1 { font-size: 3rem; background: linear-gradient(135deg, #fff, #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; border-left: 4px solid #8b5cf6; padding-left: 1rem; margin: 2rem 0 1rem; }
+        .pricing-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin: 2rem 0; }
+        .pricing-card { background: #111318; border-radius: 24px; padding: 1.8rem; width: 260px; border: 1px solid #2a2e3a; transition: transform 0.2s, border-color 0.2s; text-align: center; }
+        .pricing-card:hover { transform: translateY(-8px); border-color: #8b5cf6; }
+        .pricing-card h3 { font-size: 1.8rem; margin: 0 0 0.5rem; }
+        .price { font-size: 2.2rem; font-weight: 800; color: #c084fc; margin: 0.5rem 0; }
+        .features { list-style: none; padding: 0; margin: 1rem 0; text-align: left; }
+        .features li { margin: 0.6rem 0; padding-left: 1.5rem; position: relative; }
+        .features li::before { content: "✓"; color: #10b981; position: absolute; left: 0; }
+        .promo-code { background: #1e1b2e; border: 1px dashed #8b5cf6; border-radius: 12px; padding: 1rem; text-align: center; font-family: monospace; font-size: 1.2rem; margin: 1rem 0; }
+        .promo-code span { background: #2d2a3e; padding: 0.2rem 0.8rem; border-radius: 20px; font-weight: bold; color: #c084fc; }
+        footer { margin-top: 4rem; padding: 2rem 0; text-align: center; border-top: 1px solid #2a2e3a; font-size: 0.85rem; color: #6c7293; }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } h2 { font-size: 1.5rem; } .nav-container { flex-direction: column; gap: 1rem; } .pricing-card { width: 100%; } }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">Zurxt Host</a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/hosting.html">Planes</a>
+            <a href="https://discord.gg/TU_INVITE_AQUI" target="_blank">Discord</a>
+            <a href="https://discord.gg/TU_INVITE_AQUI" target="_blank">Soporte</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>🎮 Planes de Hosting</h1>
+    <p>Elige el plan que mejor se adapte a tus necesidades. Todos incluyen:</p>
+    <ul>
+        <li>Panel Pelican de control</li>
+        <li>Protección DDoS básica</li>
+        <li>Backups automáticos</li>
+        <li>Soporte por Discord</li>
+        <li>Actualizaciones gratuitas</li>
+    </ul>
+
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3>Básico</h3>
+            <div class="price">$7 <span style="font-size: 1rem;">/mes</span></div>
+            <ul class="features">
+                <li>2 GB RAM</li>
+                <li>1 vCore (compartido)</li>
+                <li>20 GB SSD NVMe</li>
+                <li>Hasta 10 slots</li>
+                <li>Backup cada 48h</li>
+            </ul>
+            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn">Contratar</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Estándar</h3>
+            <div class="price">$13 <span style="font-size: 1rem;">/mes</span></div>
+            <ul class="features">
+                <li>4 GB RAM</li>
+                <li>2 vCores (dedicados)</li>
+                <li>40 GB SSD NVMe</li>
+                <li>Hasta 20 slots</li>
+                <li>Backup diario (7 días)</li>
+            </ul>
+            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn">Contratar</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Pro</h3>
+            <div class="price">$20 <span style="font-size: 1rem;">/mes</span></div>
+            <ul class="features">
+                <li>6 GB RAM</li>
+                <li>3 vCores (dedicados)</li>
+                <li>60 GB SSD NVMe</li>
+                <li>Hasta 40 slots</li>
+                <li>Backup diario (14 días)</li>
+                <li>Base de datos incluida</li>
+            </ul>
+            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn">Contratar</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Ultimate</h3>
+            <div class="price">$28 <span style="font-size: 1rem;">/mes</span></div>
+            <ul class="features">
+                <li>8 GB RAM</li>
+                <li>4 vCores (dedicados)</li>
+                <li>80 GB SSD NVMe</li>
+                <li>Hasta 80 slots</li>
+                <li>Backup diario (30 días)</li>
+                <li>Base de datos + FTP externo</li>
+                <li>Soporte prioritario</li>
+            </ul>
+            <a href="https://discord.gg/TU_INVITE_AQUI" class="btn">Contratar</a>
+        </div>
+    </div>
+
+    <div class="promo-code">
+        🎁 <strong>15% de descuento</strong> con el código <span>LANZAMIENTO15</span> (primer mes)
+    </div>
+
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="https://discord.gg/TU_INVITE_AQUI" class="btn">👉 Unirse a Discord y contratar 👈</a>
+    </div>
+</div>
+
+<footer>
+    Powered by Moonrise · © 2026 Zurxt Host · <a href="/about.html" style="color:#8b5cf6;">About/Contact</a>
+</footer>
+
+</body>
+</html>
